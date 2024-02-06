@@ -24,7 +24,7 @@ public class Snap extends CardGame {
             prevCard = currentCard;
 
             try {
-                int readResult = System.in.read(new byte[System.in.available()]);;
+                int readResult = System.in.read(new byte[System.in.available()]);
             } catch (Exception e) {
                 e.printStackTrace();
             }
