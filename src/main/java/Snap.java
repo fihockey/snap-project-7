@@ -14,7 +14,7 @@ public class Snap extends CardGame {
                 break;
             }
 
-            System.out.println("Player: " + getName() + ", Card: " + currentCard);
+            System.out.println(getName() + ", Card: " + currentCard);
 
             if (prevCard != null && prevCard.getValue() == currentCard.getValue()) {
                 System.out.println("SNAP! Player: " + getName() + " wins! You owe me one....");
@@ -24,7 +24,7 @@ public class Snap extends CardGame {
             prevCard = currentCard;
 
             try {
-                int readResult = System.in.read(new byte[System.in.available()]);
+                System.in.read();
             } catch (Exception e) {
                 e.printStackTrace();
             }
