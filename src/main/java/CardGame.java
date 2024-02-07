@@ -6,14 +6,18 @@ public class CardGame {
     private final ArrayList<Card> deckOfCards;
     private final String name;
 
+    public static final String RED = "\u001B[31m";
+    public static final String CYAN = "\u001B[36m";
+    public static final String RESET = "\u001B[0m";
+
     public CardGame(String name) {
         this.name = name;
         this.deckOfCards = new ArrayList<>();
-        initializeDeck();
+        initialiseDeck();
     }
 
-    private void initializeDeck() {
-        String[] suits = {"♥", "♣", "♦", "♠"};
+    private void initialiseDeck() {
+        String[] suits = {RED + "♥" + RESET, CYAN + "♣" + RESET, RED + "♦" + RESET, CYAN + "♠" + RESET};
         String[] symbols = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
 
         for (String suit : suits) {
